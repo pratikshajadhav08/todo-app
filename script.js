@@ -12,7 +12,7 @@
   }
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(tasks)); } catch {} };
 
-  // ---------- Theme--Dark/Light ----------
+  // ---------- Theme ----------
   function applyTheme(t) {
     document.documentElement.dataset.theme = t;
     $('themeIcon').textContent = t === 'dark' ? '☀️' : '🌙';
@@ -67,7 +67,7 @@
     const d = new Date(due + 'T00:00:00');
     const today = new Date(); today.setHours(0, 0, 0, 0);
     const over = !done && d < today;
-    return { text: (over ? 'Overdue · ' : 'Due ') + d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' }), over };
+    return { text: (over ? 'Overdue · ' : 'Due ') + String(d.getDate()).padStart(2, '0') + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + d.getFullYear(), over };
   }
 
   function render() {

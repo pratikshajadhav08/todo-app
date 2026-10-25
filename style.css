@@ -205,6 +205,7 @@ input {
   font-size: 0.8rem;
   color: var(--muted);
 }
+
 .due.overdue {
   color: var(--danger);
   font-weight: 600;
@@ -242,4 +243,17 @@ input {
   * {
     transition: none !important;
   }
+}
+.due-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  flex: 1 1 150px;
+}
+.due-field input {
+  font-size: 1rem;
+  color: var(--text);
+  min-height: 42px;
 }

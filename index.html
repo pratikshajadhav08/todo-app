@@ -1,42 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Taskboard - To-Do List</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<main class="app">
-  <!-- header-TaskBoard -->
-  <header class="top">
-    <div>
-      <h1>Taskboard</h1>
-      <!-- Pending / completed -->
-      <p id="summary" class="muted" aria-live="polite"></p>
-    </div>
-    <button id="themeToggle" class="icon-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
-      <span id="themeIcon" aria-hidden="true">🌙</span>
-    </button>
-  </header>
-<!-- Form -->
-  <form id="addForm" class="add" autocomplete="off">
-    <input id="taskInput" type="text" placeholder="What needs doing?" maxlength="120" aria-label="New task" required>
-    <input id="dueInput" type="date" aria-label="Due date">
-    <button type="submit" class="primary">Add task</button>
-  </form>
-<!-- Filter--All , pending, completed -->
-  <nav class="filters" aria-label="Filter tasks">
-    <button data-filter="all" class="active">All</button>
-    <button data-filter="pending">Pending</button>
-    <button data-filter="completed">Completed</button>
-    <button id="clearDone" class="link" type="button">Clear completed</button>
-  </nav>
-<!-- list -->
-  <ul id="list" class="list"></ul>
-  <p id="empty" class="empty" hidden></p>
-  <p class="hint muted">Drag the ⋮⋮ handle to reorder · double-click a task to edit</p>
-</main>
-<script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Taskboard - To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <!-- header-TaskBoard -->
+      <header class="top">
+        <div>
+          <h1>Taskboard</h1>
+          <!-- Pending / completed -->
+          <p id="summary" class="muted" aria-live="polite"></p>
+        </div>
+        <button
+          id="themeToggle"
+          class="icon-btn"
+          aria-label="Toggle light/dark theme"
+          title="Toggle theme"
+        >
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+      </header>
+      <!-- Form -->
+      <form id="addForm" class="add" autocomplete="off">
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="What needs doing?"
+          maxlength="120"
+          aria-label="New task"
+          required
+        />
+        <label class="due-field">
+          <span>Due date (dd-mm-yyyy)</span>
+          <input id="dueInput" type="date" />
+        </label>
+        <button type="submit" class="primary">Add task</button>
+      </form>
+      <!-- Filter--All , pending, completed -->
+      <nav class="filters" aria-label="Filter tasks">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="pending">Pending</button>
+        <button data-filter="completed">Completed</button>
+        <button id="clearDone" class="link" type="button">
+          Clear completed
+        </button>
+      </nav>
+      <!-- list -->
+      <ul id="list" class="list"></ul>
+      <p id="empty" class="empty" hidden></p>
+      <p class="hint muted">
+        Drag the ⋮⋮ handle to reorder · double-click a task to edit
+      </p>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
