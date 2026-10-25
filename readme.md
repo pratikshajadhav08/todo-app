@@ -28,3 +28,4 @@ Live Project:
 --tasks are dropped onto the target's position.
 
 - `localStorage` access is wrapped in try/catch so the app still works if storage is blocked.
+
