@@ -34,10 +34,10 @@
           aria-label="New task"
           required
         />
-        <label class="due-field">
-          <span>Due date (dd-mm-yyyy)</span>
-          <input id="dueInput" type="date" />
-        </label>
+        <div class="due-field">
+          <input id="dueInput" type="date" aria-label="Due date (dd-mm-yyyy)" />
+          <span class="due-ph" aria-hidden="true">dd-mm-yyyy</span>
+        </div>
         <button type="submit" class="primary">Add task</button>
       </form>
       <!-- Filter--All , pending, completed -->
