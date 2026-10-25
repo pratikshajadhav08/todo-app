@@ -17,11 +17,11 @@ Live Project:
 - Bonus: due dates with overdue highlighting, inline editing (double-click; Enter saves, Esc cancels), "Clear completed", live pending/completed count, keyboard focus styles, reduced-motion support
 
 ## Implementation notes
-- `Index.html` – Structure of to-do-list
-- `Style.css` – CSS custom properties drive the themes via `data-theme` on `<html>`; 
+- `index.html` – Structure of to-do-list
+- `style.css` – CSS custom properties drive the themes via `data-theme` on `<html>`; 
 --flexbox/grid with a mobile-first layout
 
-- `Script.js` – 
+- `script.js` – 
 --state lives in a `tasks` array (`{id, text, done, due}`)
 --every change saves to `localStorage` and re-renders. 
 --Reordering uses the native HTML5 Drag and Drop API and works on the full list.
